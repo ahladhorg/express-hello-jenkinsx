@@ -1,0 +1,44 @@
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-rbztz[0m
+{"level":"info","ts":1591025990.6227767,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591025990.6233325,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-gdm7v[0m
+{"level":"info","ts":1591025991.4256005,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591025991.427281,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ahladhorg-express-hello-jenkins-zplhv-fxwxp[0m
+{"level":"info","ts":1591026021.6281981,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591026021.9599135,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/******org/express-hello-jenkinsx.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:16c0859446d0c26b43f493e523cc8024433147a4
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN express-hello@1.0.0 No repository field.
+
+added 50 packages from 37 contributors and audited 50 packages in 1.55s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> express-hello@1.0.0 test /workspace/source
+> exit 0
+
+
+Showing logs for build [32mahladhorg-express-hello-jenkins-zplhv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0601 15:40:29.268392      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "gcr.io/engaged-carving-192412/express-hello-jenkinsx:0.0.1": creating push check transport for gcr.io failed: GET https://gcr.io/v2/token?scope=repository%3Aengaged-carving-192412%2Fexpress-hello-jenkinsx%3Apush%2Cpull&service=gcr.io: DENIED: Token exchange failed for project 'engaged-carving-192412'. Caller does not have permission 'storage.buckets.get'. To configure permissions, follow instructions at: https://cloud.google.com/container-registry/docs/access-control
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
